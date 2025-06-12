@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -29,6 +30,19 @@ public class Principal {
         casaDragon.evalua(10);
         casaDragon.evalua(9.1);
         System.out.println(casaDragon.getDuracionEnMinutos());
+
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(2016);
+        otraPelicula.setDuracionEnMinutos(280);
+
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(otraPelicula);
+        System.out.println(calculadora.getTiempoTotal());
+
+
 
 
 
